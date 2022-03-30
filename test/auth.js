@@ -13,7 +13,7 @@ describe("Auth API", () => {
      // Test Delete Existing Test user
      describe("DELETE /users/:email", () => {
         it("It should DELETE test student if exists", (done) => {
-            const email = "mochatest1@mocha.com"
+            const email = "mochatest@mocha.com"
             chai.request(server)
                 .delete("/users/"+ email)
                 .end((err, res) => {
@@ -50,8 +50,8 @@ describe("Auth API", () => {
     describe("POST /auth/signUp", () => {
         it("It should NOT sign up request with incorrect password and confirm password", (done) => {
             const student = {
-                childName: "mocha test1",
-                email: "mochatest1@mocha.com",
+                childName: "mocha test",
+                email: "mochatest@mocha.com",
                 phoneNumber: "07030050019",
                 countryCode: "234001",
                 password: "password",
@@ -77,8 +77,8 @@ describe("Auth API", () => {
     describe("POST /auth/signUp", () => {
         it("It should sign up a single student", (done) => {
             const student = {
-                childName: "mocha test1",
-                email: "mochatest1@mocha.com",
+                childName: "mocha test",
+                email: "mochatest@mocha.com",
                 phoneNumber: "07030050019",
                 countryCode: "234001",
                 password: "password",
@@ -107,8 +107,8 @@ describe("Auth API", () => {
     describe("POST /auth/signUp", () => {
         it("It should NOT sign up an existing student", (done) => {
             const student = {
-                childName: "mocha test1",
-                email: "mochatest1@mocha.com",
+                childName: "mocha test",
+                email: "mochatest@mocha.com",
                 phoneNumber: "07030050019",
                 countryCode: "234001",
                 password: "password",
