@@ -23,6 +23,8 @@ app.use(function(req, res, next) {
     next(createError(404));
   });
 
-app.listen(PORT, ()=>{
+module.exports = app.listen(PORT, ()=>{
     console.log(`app listening on port ${PORT}`, )
 })
+
+

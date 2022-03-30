@@ -40,7 +40,7 @@ router.post('/', async (req, res, next) => {
   
 });
 
-
+// middleware to authenticate user so that they see only lessons in their levels
 function authenticateToken(req, res, next){
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]  //returns authheader if defined
